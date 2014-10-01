@@ -1,40 +1,34 @@
-var salesDetailsRight = $('.sales__details__right');
-var salesDetailslLeft = $('.sales__details__left');
-var salesRight = $('.sales__right');
-var salesLeft = $('.sales__left');
-
-/*
-Function are reusable pieces of code
-They are basically code store inside variables
- */
+var info1 = $('.info1');
+var info1_detail= $('.info1_detail');
 
 var buttonClickHandler = function () {
-    var isActive = salesDetailsRight.attr('data-state');
-
-    if (isActive =='active') {
-        salesDetailsRight.attr('data-state','inactive');
-
-    } else {
-        salesDetailsRight.attr('data-state','active');
-    }
-
-
+	var isActive = info1_detail.attr('data-state');
+	
+	if (isActive == 'active'){
+		info1_detail.attr('data-state', 'inactive');
+	} else {
+		info1_detail.attr('data-state', 'active');
+	}
+	
 };
 
-salesRight.on('click', buttonClickHandler);
 
+info1.on('click', buttonClickHandler);
+
+
+var info2 = $('.info2');
+var info2_detail= $('.info2_detail');
 
 var buttonClickHandler = function () {
-    var isActive = salesDetailsLeft.attr('data-state');
-
-    if (isActive =='active') {
-        salesDetailsLeft.attr('data-state','inactive');
-
-    } else {
-        salesDetailsLeft.attr('data-state','active');
-    }
-
-
+	var isActive = info2_detail.attr('data-state');
+	
+	if (isActive == 'active'){
+		info2_detail.attr('data-state', 'inactive');
+	} else {
+		info2_detail.attr('data-state', 'active');
+	}
+	
 };
 
-salesLeft.on('click', buttonClickHandler);
+
+info2.on('click', buttonClickHandler);

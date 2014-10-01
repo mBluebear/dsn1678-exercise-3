@@ -87,9 +87,25 @@ body {
   padding: 2em;
   position: absolute;
   width: 90%;
+  opacity:0;
 
   background-color: #000;
   border-radius: 6px;
+}
+.info1_detail{
+	opacity:0;
+}
+	
+.info1_detail[data-state="active"]{
+	opacity:1;
+}
+
+.info2_detail{
+	opacity:0;
+}
+	
+.info2_detail[data-state="active"]{
+	opacity:1;
 }
 
 .sales__details::before {
@@ -156,13 +172,3 @@ body {
 
   text-indent: 100%;
 }
-
-.sales__details {
-    display: none;
-}
-
-.sales__details[data-state="active"] {
-    display: block;
-}
-
-
